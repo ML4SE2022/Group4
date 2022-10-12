@@ -79,7 +79,7 @@ def convert_methods_and_write_vec(target_file, output_file, language):
 
 # delete the .vec files before running this again
 if __name__ == "__main__":
-	convert_methods_and_write_vec('data/train.java-cs.txt.java', 'valid.java-cs.txt.java.vec', 'java')
-	convert_methods_and_write_vec('data/train.java-cs.txt.cs', 'valid.java-cs.txt.cs.vec', 'c-sharp')
+	convert_methods_and_write_vec('data/train.java-cs.txt.java', 'vec/train.java-cs.txt.java.vec', 'java')
+	convert_methods_and_write_vec('data/train.java-cs.txt.cs', 'vec/train.java-cs.txt.cs.vec', 'c-sharp')
 
 	print('.vec files have been updated.')
