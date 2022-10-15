@@ -1,5 +1,15 @@
 import numpy
+from UniXcoder import preprocess
 from tree_sitter import Language, Parser
+import os
+import torch
+from transformers import RobertaTokenizer, RobertaConfig, RobertaModel
+from transformers import AutoTokenizer, AutoModel
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+tokenizer = RobertaTokenizer.from_pretrained("microsoft/codebert-base")
+model = RobertaModel.from_pretrained("microsoft/codebert-base")
+model.to(device)
 
 Language.build_library(
   # Store the library in the `build` directory
@@ -12,7 +22,7 @@ Language.build_library(
   ]
 )
 
-
+# Stolen from some Github issue, need to find the link for reference
 def traverse_tree(tree):
     cursor = tree.walk()
 
@@ -35,8 +45,8 @@ def traverse_tree(tree):
             if cursor.goto_next_sibling():
                 retracing = False
 
-
-def get_ast_identifier_vector(full_method, language="java"):
+# CodeT5
+def get_ast_vector_codet5(full_method, language="java"):
 	C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
 	JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
 
@@ -66,20 +76,99 @@ def get_ast_identifier_vector(full_method, language="java"):
 		return [1 if item == 'identifier' else 0 for item in vector]
 
 
-def convert_methods_and_write_vec(target_file, output_file, language):
+# CodetT5 unique identifiers all recieve a unique identifer instead of just 
+# every single one recieve 1
+def get_ast_vector_unique_codet5(full_method, language="java"):
+	C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
+	JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
+
+	parser = Parser()
+
+	if language == "java":
+		parser.set_language(JAVA_LANGUAGE)
+		# to fix a missing anonymous node which happens for some reasons with java 
+		# if the class is not specified.
+		full_method = "public class App {" + full_method + "}"
+	else:
+		parser.set_language(C_SHARP_LANGUAGE)
+
+	data = full_method
+	byte = bytearray(data.encode())
+	tree = parser.parse(byte)
+
+	nodes = []
+
+	identifiers = []
+	identifiers_ids = {}
+
+	for node in traverse_tree(tree):
+		if node.is_named:
+			if node.type == "identifier":
+				identifiers.append(full_method[node.start_byte:node.end_byte])
+
+			nodes.append(node)
+
+	if language == "java":
+		nodes = nodes[5:]
+
+	init_id = 0
+
+	for identifier in identifiers:
+		if identifier not in identifiers_ids:
+			identifiers_ids[identifier] = init_id
+			init_id += 1
+
+	vector = []
+
+	for node in nodes:
+		node_body = full_method[node.start_byte:node.end_byte]
+
+		if node_body in identifiers:
+			vector.append(identifiers_ids[node_body])
+		else:
+			vector.append(0)
+
+	return vector
+
+
+def write_vector_to_file(vector, output_file):
+	with open(output_file, "a") as vec_store:
+		vec_store.write(str(vector) + '\n')
+
+
+def convert_methods_and_write_vec(target_file, output_file_codet5, output_file_codet5_unique,
+	output_file_unixcoder, language):
+	if os.path.isfile(output_file_codet5):
+		os.remove(output_file_codet5)
+
+	if os.path.isfile(output_file_unixcoder):
+		os.remove(output_file_unixcoder)
+
+	if os.path.isfile(output_file_codet5_unique):
+		os.remove(output_file_codet5_unique)
+
 	with open(target_file) as f:
 	    methods = [line.rstrip() for line in f]
 
 	for method in methods:
-		vector = get_ast_identifier_vector(method, language=language)
+		vector_codet5 = get_ast_vector_codet5(method, language=language)
+		vector_unixcoder = preprocess.AST(method, language, tokenizer)
+		vector_codet5_unique = get_ast_vector_unique_codet5(method, language)
 
-		with open(output_file, "a") as vec_store:
-		    vec_store.write(str(vector) + '\n')
+		write_vector_to_file(vector_codet5, output_file_codet5)
+		write_vector_to_file(vector_unixcoder, output_file_unixcoder)
+		write_vector_to_file(vector_codet5_unique, output_file_codet5_unique)
 
 
-# delete the .vec files before running this again
 if __name__ == "__main__":
-	convert_methods_and_write_vec('data/train.java-cs.txt.java', 'vec/train.java-cs.txt.java.vec', 'java')
-	convert_methods_and_write_vec('data/train.java-cs.txt.cs', 'vec/train.java-cs.txt.cs.vec', 'c-sharp')
+	convert_methods_and_write_vec('data/train.java-cs.txt.java', 
+		'vec/train.java-cs.txt.java.codet5.vec',
+		'vec/train.java-cs.txt.java.codet5-unique.vec',
+		'vec/train.java-cs.txt.java.unixcoder.vec', 'java')
+
+	convert_methods_and_write_vec('data/train.java-cs.txt.cs', 
+		'vec/train.java-cs.txt.java.codet5.vec',
+		'vec/train.java-cs.txt.java.codet5-unique.vec',
+		'vec/train.java-cs.txt.java.unixcoder.vec', 'c_sharp')
 
 	print('.vec files have been updated.')
