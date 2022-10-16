@@ -6,7 +6,7 @@ from tree_sitter import Language, Parser
 
 # Load tree-sitter parser
 parsers={}              
-for lang in ['java','go','javascript','php','c','cpp','c_sharp']:
+for lang in ['java','c_sharp']:
     LANGUAGE = Language('UniXcoder/parser/my-languages.so', lang)
     parser = Parser()
     parser.set_language(LANGUAGE) 

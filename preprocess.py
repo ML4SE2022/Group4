@@ -38,7 +38,7 @@ def main():
     with open(output_file) as infile:
         for line in infile.read().split('\n'):
             assert len(tokenizer(line)['input_ids']) <= 512
-    ''''        
+    '''
     
 if __name__ == "__main__":
     main()

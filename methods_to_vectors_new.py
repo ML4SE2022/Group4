@@ -1,7 +1,8 @@
 import numpy
-from UniXcoder import preprocess
+#from UniXcoder import preprocess
 from tree_sitter import Language, Parser
 import os
+import sys
 import torch
 from transformers import RobertaTokenizer, RobertaConfig, RobertaModel
 from transformers import AutoTokenizer, AutoModel
@@ -47,128 +48,132 @@ def traverse_tree(tree):
 
 # CodeT5
 def get_ast_vector_codet5(full_method, language="java"):
-	C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
-	JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
+    C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
+    JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
 
-	parser = Parser()
+    parser = Parser()
 
-	if language == "java":
-		parser.set_language(JAVA_LANGUAGE)
-		# to fix a missing anonymous node which happens for some reasons with java 
-		# if the class is not specified.
-		full_method = "public class App {" + full_method + "}"
-	else:
-		parser.set_language(C_SHARP_LANGUAGE)
+    if language == "java":
+        parser.set_language(JAVA_LANGUAGE)
+        # to fix a missing anonymous node which happens for some reasons with java 
+        # if the class is not specified.
+        full_method = "public class App {" + full_method + "}"
+    else:
+        parser.set_language(C_SHARP_LANGUAGE)
 
-	data = full_method
-	byte = bytearray(data.encode())
-	tree = parser.parse(byte)
+    data = full_method
+    byte = bytearray(data.encode())
+    tree = parser.parse(byte)
 
-	vector = []
+    vector = []
 
-	for node in traverse_tree(tree):
-		if node.is_named:
-			vector.append(node.type)
+    for node in traverse_tree(tree):
+        if node.is_named:
+            vector.append(node.type)
 
-	if language == "java":
-		return [1 if item == 'identifier' else 0 for item in vector[5:]]
-	else:
-		return [1 if item == 'identifier' else 0 for item in vector]
+    if language == "java":
+        return [1 if item == 'identifier' else 0 for item in vector[5:]]
+    else:
+        return [1 if item == 'identifier' else 0 for item in vector]
 
 
 # CodetT5 unique identifiers all recieve a unique identifer instead of just 
 # every single one recieve 1
 def get_ast_vector_unique_codet5(full_method, language="java"):
-	C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
-	JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
+    C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
+    JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
 
-	parser = Parser()
+    parser = Parser()
 
-	if language == "java":
-		parser.set_language(JAVA_LANGUAGE)
-		# to fix a missing anonymous node which happens for some reasons with java 
-		# if the class is not specified.
-		full_method = "public class App {" + full_method + "}"
-	else:
-		parser.set_language(C_SHARP_LANGUAGE)
+    if language == "java":
+        parser.set_language(JAVA_LANGUAGE)
+        # to fix a missing anonymous node which happens for some reasons with java 
+        # if the class is not specified.
+        full_method = "public class App {" + full_method + "}"
+    else:
+        parser.set_language(C_SHARP_LANGUAGE)
 
-	data = full_method
-	byte = bytearray(data.encode())
-	tree = parser.parse(byte)
+    data = full_method
+    byte = bytearray(data.encode())
+    tree = parser.parse(byte)
 
-	nodes = []
+    nodes = []
 
-	identifiers = []
-	identifiers_ids = {}
+    identifiers = []
+    identifiers_ids = {}
 
-	for node in traverse_tree(tree):
-		if node.is_named:
-			if node.type == "identifier":
-				identifiers.append(full_method[node.start_byte:node.end_byte])
+    for node in traverse_tree(tree):
+        if node.is_named:
+            if node.type == "identifier":
+                identifiers.append(full_method[node.start_byte:node.end_byte])
 
-			nodes.append(node)
+            nodes.append(node)
 
-	if language == "java":
-		nodes = nodes[5:]
+    if language == "java":
+        nodes = nodes[5:]
 
-	init_id = 0
+    init_id = 0
 
-	for identifier in identifiers:
-		if identifier not in identifiers_ids:
-			identifiers_ids[identifier] = init_id
-			init_id += 1
+    for identifier in identifiers:
+        if identifier not in identifiers_ids:
+            identifiers_ids[identifier] = init_id
+            init_id += 1
 
-	vector = []
+    vector = []
 
-	for node in nodes:
-		node_body = full_method[node.start_byte:node.end_byte]
+    for node in nodes:
+        node_body = full_method[node.start_byte:node.end_byte]
 
-		if node_body in identifiers:
-			vector.append(identifiers_ids[node_body])
-		else:
-			vector.append(0)
+        if node_body in identifiers:
+            vector.append(identifiers_ids[node_body])
+        else:
+            vector.append(0)
 
-	return vector
-
-
-def write_vector_to_file(vector, output_file):
-	with open(output_file, "a") as vec_store:
-		vec_store.write(str(vector) + '\n')
+    return vector
 
 
-def convert_methods_and_write_vec(target_file, output_file_codet5, output_file_codet5_unique,
-	output_file_unixcoder, language):
-	if os.path.isfile(output_file_codet5):
-		os.remove(output_file_codet5)
+def write_vectors_to_file(vectors, output_file):
+    vector_output = ""
+    for vector in vectors:
+        vector_output += str(vector) + '\n'
+        
+    with open(output_file, "w") as vec_store:
+        vec_store.write(vector_output)
 
-	if os.path.isfile(output_file_unixcoder):
-		os.remove(output_file_unixcoder)
 
-	if os.path.isfile(output_file_codet5_unique):
-		os.remove(output_file_codet5_unique)
+def convert_methods_and_write_vec(input_file, output_file, method, language):
 
-	with open(target_file) as f:
-	    methods = [line.rstrip() for line in f]
+    with open(input_file) as f:
+        lines = [line.rstrip() for line in f]
 
-	for method in methods:
-		vector_codet5 = get_ast_vector_codet5(method, language=language)
-		vector_unixcoder = preprocess.AST(method, language, tokenizer)
-		vector_codet5_unique = get_ast_vector_unique_codet5(method, language)
+    vectors = list()
+    for line in lines:
+        if method == "t5":
+            vectors.append(get_ast_vector_codet5(line, language=language))
+        elif method == "unixcoder":
+            vectors.append(preprocess.AST(line, language, tokenizer))
+        elif method == "t5unique":
+            vectors.append(get_ast_vector_unique_codet5(line, language))
 
-		write_vector_to_file(vector_codet5, output_file_codet5)
-		write_vector_to_file(vector_unixcoder, output_file_unixcoder)
-		write_vector_to_file(vector_codet5_unique, output_file_codet5_unique)
+        write_vectors_to_file(vectors, output_file)
 
+def main():
+    if len(sys.argv) != 5:
+        print("use: input_file, output_file, [java, c-sharp], [t5, t5unique, unixcoder]")
+        sys.exit()
+    
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    language = sys.argv[3]
+    method = sys.argv[4]
+    
+    accepted_languages = ["java", "c-sharp"]
+    accepted_methods = ["t5", "t5unique", "unixcoder"]
+    
+    assert language in accepted_languages
+    assert method in accepted_methods
+    
+    convert_methods_and_write_vec(input_file, output_file, method, language)
 
 if __name__ == "__main__":
-	convert_methods_and_write_vec('data/train.java-cs.txt.java', 
-		'vec/train.java-cs.txt.java.codet5.vec',
-		'vec/train.java-cs.txt.java.codet5-unique.vec',
-		'vec/train.java-cs.txt.java.unixcoder.vec', 'java')
-
-	convert_methods_and_write_vec('data/train.java-cs.txt.cs', 
-		'vec/train.java-cs.txt.java.codet5.vec',
-		'vec/train.java-cs.txt.java.codet5-unique.vec',
-		'vec/train.java-cs.txt.java.unixcoder.vec', 'c_sharp')
-
-	print('.vec files have been updated.')
+    main()
