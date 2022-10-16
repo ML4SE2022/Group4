@@ -1,5 +1,5 @@
 import numpy
-#from UniXcoder import preprocess
+from UniXcoder import preprocess
 from tree_sitter import Language, Parser
 import os
 import sys
