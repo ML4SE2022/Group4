@@ -4,6 +4,9 @@ import sys
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
 def main():
+    if len(sys.argv) != 4:
+        print("use: code_file, vec_file, output_file")
+        sys.exit()
     
     code_file = sys.argv[1]
     vec_file = sys.argv[2]
