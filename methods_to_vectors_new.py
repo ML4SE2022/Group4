@@ -23,6 +23,9 @@ Language.build_library(
   ]
 )
 
+C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
+JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
+
 # Stolen from some Github issue, need to find the link for reference
 def traverse_tree(tree):
     cursor = tree.walk()
@@ -48,9 +51,6 @@ def traverse_tree(tree):
 
 # CodeT5
 def get_ast_vector_codet5(full_method, language="java"):
-    C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
-    JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
-
     parser = Parser()
 
     if language == "java":
@@ -80,9 +80,6 @@ def get_ast_vector_codet5(full_method, language="java"):
 # CodetT5 unique identifiers all recieve a unique identifer instead of just 
 # every single one recieve 1
 def get_ast_vector_unique_codet5(full_method, language="java"):
-    C_SHARP_LANGUAGE = Language('build/my-languages.so', 'c_sharp')
-    JAVA_LANGUAGE = Language('build/my-languages.so', 'java')
-
     parser = Parser()
 
     if language == "java":
@@ -159,7 +156,7 @@ def convert_methods_and_write_vec(input_file, output_file, method, language):
 
 def main():
     if len(sys.argv) != 5:
-        print("use: input_file, output_file, [java, c-sharp], [t5, t5unique, unixcoder]")
+        print("use: input_file, output_file, [java, c_sharp], [t5, t5unique, unixcoder]")
         sys.exit()
     
     input_file = sys.argv[1]
@@ -167,7 +164,7 @@ def main():
     language = sys.argv[3]
     method = sys.argv[4]
     
-    accepted_languages = ["java", "c-sharp"]
+    accepted_languages = ["java", "c_sharp"]
     accepted_methods = ["t5", "t5unique", "unixcoder"]
     
     assert language in accepted_languages
