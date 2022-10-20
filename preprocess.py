@@ -27,7 +27,7 @@ def main():
         if len(code_lines[i])<1:
             continue
             
-        vec_line = vec_lines[i][1:-1].replace(',', '')
+        vec_line = " ".join(vec_lines)
         new_line = code_lines[i] + "</s></s>" + vec_line
         tokenized_new_line = tokenizer(new_line)
                 
