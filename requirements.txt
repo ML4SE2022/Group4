@@ -1,0 +1,4 @@
+numpy
+transformers
+tree_sitter
+torch
