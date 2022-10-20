@@ -20,7 +20,7 @@ and [java](https://github.com/tree-sitter/tree-sitter-java).
 `prepare_data.sh`.
 2. Concatenate the vectors created in the previous step to the original sequence, resulting in the 
 data that is used for training, by running `preprocess_data.sh`.
-3. Finally, run `finetune.sh` to start training the model. This step uses the instructions as 
+3. Finally, run `finetuneT5[unique].sh` to start training the model. This step uses the instructions as 
 described by codeXGLUE.
 
 ## Results

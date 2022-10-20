@@ -5,9 +5,9 @@ python codeXGLUE/code/run.py \
 	--model_name_or_path microsoft/codebert-base \
 	--config_name roberta-base \
 	--tokenizer_name roberta-base \
-	--train_filename ./preprocessed/train.t5.java,./preprocessed/train.t5.cs \
-	--dev_filename ./preprocessed/valid.t5.java,./preprocessed/valid.t5.cs \
-	--output_dir ./finetuned \
+	--train_filename ./preprocessed/train.t5unique.java,./preprocessed/train.t5unique.cs \
+	--dev_filename ./preprocessed/valid.t5unique.java,./preprocessed/valid.t5unique.cs \
+	--output_dir ./finetunedT5unique \
 	--max_source_length 512 \
 	--max_target_length 512 \
 	--beam_size 5 \
