@@ -11,7 +11,7 @@ python codeXGLUE/code/run.py \
 	--max_source_length 512 \
 	--max_target_length 512 \
 	--beam_size 5 \
-	--train_batch_size 16 \
-	--eval_batch_size 16 \
+	--train_batch_size 8 \
+	--eval_batch_size 8 \
 	--train_steps 100000 \
 	--eval_steps 5000
