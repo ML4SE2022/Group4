@@ -28,8 +28,9 @@ def main():
             continue
             
         vec_line = " ".join(vec_lines)
-        new_line = code_lines[i] + "</s></s>" + vec_line
-        tokenized_new_line = tokenizer(new_line)
+        code_line = code_lines[i]
+        tokenized_new_line = tokenizer.encode(code_line, vec_line, add_special_tokens=True)
+        new_line = tokenizer.decode(tokenized_new_line)
                 
         if len(tokenized_new_line['input_ids'])<=512:
             output += new_line + '\n'
