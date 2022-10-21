@@ -1,4 +1,5 @@
 from transformers import RobertaTokenizer
+import math
 import sys
 
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
@@ -24,7 +25,7 @@ def main():
     output = ""
     
     for i in range(n_lines):
-        print("progress: "+str(i/n_lines*100)+"%", end='\r')
+        print("progress: "+str(math.floor(i/n_lines*100))+"%", end='\r')
         if len(code_lines[i])<1:
             continue
             
