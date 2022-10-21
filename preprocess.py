@@ -24,17 +24,18 @@ def main():
     output = ""
     
     for i in range(n_lines):
+        print("progress: "+str(i/n_lines*100)+"%", end='\r')
         if len(code_lines[i])<1:
             continue
             
-        vec_line = " ".join(vec_lines)
+        vec_line = " ".join(vec_lines[i][1:-1].split(','))
         code_line = code_lines[i]
         tokenized_new_line = tokenizer.encode(code_line, vec_line, add_special_tokens=True)
         new_line = tokenizer.decode(tokenized_new_line)
                 
-        if len(tokenized_new_line['input_ids'])<=512:
-            output += new_line + '\n'
+        output += new_line + '\n'
             
+    print()
     with open(output_file, 'w') as outfile:
         outfile.write(output)
      
