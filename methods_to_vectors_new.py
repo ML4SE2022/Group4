@@ -144,7 +144,12 @@ def convert_methods_and_write_vec(input_file, output_file, method, language):
         lines = [line.rstrip() for line in f]
 
     vectors = list()
+    n_lines = len(lines)
+    i=0
+    
     for line in lines:
+        print("progress: "+str(math.floor(i/n_lines*100))+"%", end='\r')
+        
         if method == "t5":
             vectors.append(get_ast_vector_codet5(line, language=language))
         elif method == "unixcoder":
