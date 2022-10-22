@@ -1,9 +1,13 @@
 from transformers import RobertaTokenizer
+import math
 import sys
 
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 
 def main():
+    if len(sys.argv) != 4:
+        print("use: code_file, vec_file, output_file")
+        sys.exit()
     
     code_file = sys.argv[1]
     vec_file = sys.argv[2]
@@ -21,16 +25,18 @@ def main():
     output = ""
     
     for i in range(n_lines):
+        print("progress: "+str(math.floor(i/n_lines*100))+"%", end='\r')
         if len(code_lines[i])<1:
             continue
             
-        vec_line = vec_lines[i][1:-1].replace(',', '')
-        new_line = code_lines[i] + "</s></s>" + vec_line
-        tokenized_new_line = tokenizer(new_line)
+        vec_line = " ".join(vec_lines[i][1:-1].split(','))
+        code_line = code_lines[i]
+        tokenized_new_line = tokenizer.encode(code_line, vec_line, add_special_tokens=True)
+        new_line = tokenizer.decode(tokenized_new_line)
                 
-        if len(tokenized_new_line['input_ids'])<=512:
-            output += new_line + '\n'
+        output += new_line + '\n'
             
+    print()
     with open(output_file, 'w') as outfile:
         outfile.write(output)
      

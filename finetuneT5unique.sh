@@ -1,0 +1,17 @@
+python codeXGLUE/code/run.py \
+	--do_train \
+	--do_eval \
+	--model_type roberta \
+	--model_name_or_path microsoft/codebert-base \
+	--config_name roberta-base \
+	--tokenizer_name roberta-base \
+	--train_filename ./preprocessed/train.t5unique.java,./preprocessed/train.t5unique.cs \
+	--dev_filename ./preprocessed/valid.t5unique.java,./preprocessed/valid.t5unique.cs \
+	--output_dir ./finetunedT5unique \
+	--max_source_length 512 \
+	--max_target_length 512 \
+	--beam_size 5 \
+	--train_batch_size 8 \
+	--eval_batch_size 8 \
+	--train_steps 100000 \
+	--eval_steps 5000
