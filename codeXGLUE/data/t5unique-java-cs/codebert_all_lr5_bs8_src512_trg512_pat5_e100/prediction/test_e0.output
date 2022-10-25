@@ -1,0 +1,499 @@
+public virtual int GetOffset(){return this;}0  0  0  0  0  0  0  0  0  0  1
+
+
+
+public override bool Equals(object o){return false;}0  0  0  0  0  0  0  0  0  0  0  1
+
+
+
+public override java.nio.ByteBuffer put(java){throw new java.nio.nio.nio.nio.IOException();}0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+public override Object Clone(){return this;}0  0  0  0  0  1  0  0
+
+public override bool Equals(){return false;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public override String ToString(){return " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public virtual DescribeTransitGatewayTransitGatewayTransitGatewayRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeTransitGatewayAssociationRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeTransitGatewayResponseUnmarshaller.Instance;return Invoke<DescribeTransitGatewayResponseUnmarshaller.Instance;return Invoke<DescribeVpcResponse>(request, options);}0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+public virtual DescribeVpcAssociationResponse DescribeVpcAssociationVpcAssociationVpcAssociationVpcAssociationRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeVpcAssociationRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeVpcAssociationResponseUnmarshaller.Instance;return Invoke<DescribeVpcAssociationResponse>(request, options);}0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+public override string ToString(){StringBuilder buffer = new StringBuilder();if (int i < 0){throw new System.Append(" + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public virtual void Reset(){return this;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+public override java.nio.ByteBuffer java.java.java.nio.java.java.nio.nio.java.java.nio.nio.java.nio.nio.nio.nio.nio.nio.nio.nio.nio.nio.java.nio.nio.nio.nio.nio.nio.nio.nioException java.nio.nio.nio.nio.ByteBufferException();}0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  2  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+public virtual DescribeEndpointResponse DescribeEndpoint(DescribeEndpointRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeEndpointRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeEndpointResponseUnmarshaller.Instance;return Invoke<DescribeEndpointResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public override void Clone(){return this;}0  0  0  0  0  0  0  0  1
+
+public override java.nio.nio.nio.nio.nio.nio.nio.nio.nio.nio.ReadUnio.ReadUnio.Short();if (int i < 0){if (int i < 0){throw new java.nio.nio.nio.nio.nio.nio.nio.nio.ReadUShort();}if (int i < 0){throw new java.nio.nio.nio.nio.nio.nio.ReadUShort();}if (int i < 0){throw new java.nio.nio.nio.ReadUShort();}0  0  0  0  0  0  0  0  0  0  1  2  0  0  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+public virtual DeleteDBInstanceResponse DeleteDBInstance(DeleteDBInstanceRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteDBInstanceRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteDBInstanceResponseUnmarshaller.InstanceResponseUnmarshaller.InstanceResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+public virtual DeleteDBInstanceRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteModelRequestMarshaller.InstanceRequestMarshaller.InstanceResponseUnmarshaller.InstanceResponseUnmarshaller.InstanceResponseUnmarshaller.InstanceResponseUnmarshaller.InstanceResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+public override string To(){return this;}0  0  0  0  0  0  0  0  0  0  1
+public virtual UpdateDetectorResponse UpdateDetector(UpdateDetectorRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateDetectorRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateDetectorResponseUnmarshaller.Instance;return Invoke<UpdateDetectorResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+public virtual DescribeApplicationResponse DescribeApplication(DescribeUsageRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeUsageRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeUsageResponseUnmarshaller.Instance;return Invoke<DescribeUsageResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+public override bool Equals(object o){return false;}0  0  0  0  0  0  0  0  0  1  0  0  0  0
+
+public override string ToString(){return new StringBuilder();}0  0  0  0  0  0  0  0  0  0  0  1
+
+
+
+public virtual DescribeDBClusterResponse DescribeDBCluster(DescribeDBClusterRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeDBClusterRequestMarshaller.Instance;options.ResponseUnmarshaller = DescribeDBClusterResponseUnmarshaller.Instance;return Invoke<DescribeClusterResponse>(request, options);}0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+public override string ToString(){return this;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public override bool Equals(){return false;}0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+public override string ToString(){return "openAPI")}0  0  0  0  0  0  0  0  0  0  0  0
+public override bool Equals(object obj){if (this){return false;}0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+public override java.nio.ByteBuffer java.java.nio.nio.java.java.nio.nio.java.nio.nio.java.java.nio.nio.nio.java.nio.nio.nio.nio.nio.nio.java.nio.nio.nio.nio.nio.nio.nio.nio.nio.nio.nio.nio.nioException();}0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public virtual void Reset(){return false;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+public override bool Equals(object o){return false;}0  0  0  0  0  0  0  0  0  0  1
+
+
+
+
+public override string ToString(){if (m_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_1_0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public override string ToString(){return "0
+
+
+
+
+
+
+
+
+
+public virtual UpdateMetadataResponse UpdateMetadata(UpdateMetadataRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateMetadataRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateMetadataResponseUnmarshaller.Instance;return Invoke<UpdateMetadataResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+public virtual UpdateTemplateResponse UpdateTemplate(UpdateTemplateRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateTemplateRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateTemplateResponseUnmarshaller.Instance;return Invoke<UpdateTemplateResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+public virtual UpdateConfigurationResponse UpdateConfiguration(UpdateConfigurationRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateConfigurationRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateInstance;options.ResponseUnmarshaller = UpdateConfigurationResponseUnmarshaller.Instance;return Invoke<UpdateConfigurationResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+public override string ToString(){return this;}0  0  0  0  0  0  0  0  0  0  0
+
+
+public override string ToString(){StringBuilder buffer = new StringBuilder();StringBuilder buffer = new StringBuilder();buffer.Append("
+
+
+
+
+
+
+public override string To(){return this;}0  0  0  0  0  0  0  0  0  0
+
+public override string ToString(){StringBuilder sb = new StringBuilder();if (int i < 0){throw new ArgumentException(" + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + "
+
+
+
+public virtual UpdateUserResponse UpdateUser(UpdateUserRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateUserRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateUserResponseUnmarshaller.Instance;return Invoke<UpdateUserResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+public virtual DescribeDBInstancesResponse DescribeDBInstancesRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeDBParameterRequestMarshaller = DescribeDBInstance;options.ResponseUnmarshaller = DescribeDBParameterResponseUnmarshaller.Instance;return Invoke<DescribeDBParameterResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+
+
+
+
+
+
+
+public override bool Equals(){return false;}0  0  0  0  0  0  0  0  0  0  0
+public virtual DeleteParameterGroupResponse DeleteParameterGroup(DeleteParameterGroupRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteParameterGroupRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteParameterGroupResponseUnmarshaller.Instance;return Invoke<DeleteParameterGroupResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+
+
+public override string ToString(){return "0  0  0  0  0  0
+
+
+public virtual CreateTrafficMirrorResponse CreateTrafficMirrorResponse CreateTrafficMirror(CreateTrafficMirrorRequest request){var options = new InvokeOptions();options.RequestMarshaller = CreateTrafficMirrorRequestMarshaller.Instance;options.ResponseUnmarshaller = CreateTrafficMirrorResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+
+
+
+
+
+public override string ToString(){return null;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+public virtual UpdateUserConfigResponse UpdateConfig(UpdateConfigRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateConfigRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateInstance;options.ResponseUnmarshaller = UpdateInstanceResponseUnmarshaller.InstanceResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+public virtual UpdateIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityIdentityId
+
+
+
+
+
+
+
+public override string ToString(){return this;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+public override int Get(int index){int index = 0;int i = 0; i = 0; i++] = 0; i < 0; i < 0; i < 0; i++] = 0; i++] & 0; i++] & 0; i++] & 0; i++] & 0;}}0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+public override java.nio.ByteBuffer java.nio.nio.nio.nio.nio.nio.nio.nio.ByteBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBuffer(){return bufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBuffer(){return bufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBufferBuffer
+
+
+
+
+
+
+
+
+
+public override string ToString(){return "";}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+
+public virtual DeleteLifecycleResponse DeleteLifecycle(DeleteLifecycleRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteLifecycleRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteLifecycleResponseUnmarshaller.Instance;return Invoke<DeleteLifecycleResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+
+
+public override Object Clone(){return this;}0  0  0  0  0  1  0  0  2
+
+
+
+
+public override bool Equals(object o){return false;}0  0  0  0  0  0  0  0  0  0  1
+
+
+
+
+public virtual CreateAttributeResponse CreateAttribute(CreateAttributeRequest request){var options = new InvokeOptions();options.RequestMarshaller = CreateAttributeRequestMarshaller.Instance;options.ResponseUnmarshaller = CreateAttributeResponseUnmarshaller.Instance;return Invoke<CreateAttributeResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+public override void Remove(){if (path == null){throw new System.Count == null){throw new System.NotImplementedException();}0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public virtual UpdateUserResponse UpdateUser(UpdateUserRequest request){var options = new InvokeOptions();options.RequestMarshaller = UpdateUserRequestMarshaller.Instance;options.ResponseUnmarshaller = UpdateUserResponseUnmarshaller.Instance;return Invoke<UpdateUserResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+public override int Get(int index){int index = 0;int i = 0; i = 0; i++] = 0; i < 0; i < 0; i++] = 0; i++] = 0; i++] & 0; i++] & 0; i++] & 0; i++] & 0; i++] & 1;}0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("\n");buffer.Append("\n");buffer.Append("\n");buffer.Append("
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public virtual DeleteSnapshotResponse DeleteSnapshot(DeleteSnapshotRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteSnapshotRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteSnapshotResponseUnmarshaller.Instance;return Invoke<DeleteSnapshotResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+
+
+
+
+
+public virtual DescribeDBInstanceResponse DescribeDBInstanceRequest request){var options = new InvokeOptions();options.RequestMarshaller = DescribeDBInstanceRequestMarshaller.InstanceRequestMarshaller.InstanceResponseUnmarshaller.InstanceResponseUnmarshaller.InstanceResponseUnmarshaller.InstanceResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+public override String ToString(){StringBuilder buffer = new StringBuilder();buffer.Append("\n");buffer.Append("\n");buffer.Append("
+
+
+
+
+
+
+
+public virtual DeleteSnapshotResponse DeleteSnapshot(DeleteSnapshotRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteSnapshotRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteSnapshotResponseUnmarshaller.Instance;return Invoke<DeleteSnapshotResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+public override java.nio.StringBuilder java.nio.nio.nio.nio.nio.Set(java.nio.nio.CompareException e){throw new java.nioException();}0  0  0  0  0  0  0  0  1  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+public virtual DeleteUserResponse DeleteUser(DeleteUserRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteUserRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteUserResponseUnmarshaller.Instance;return Invoke<DeleteUserResponseUnmarshallerResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+
+
+
+
+public override string ToString(){return this;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+
+public override TokenStream Create(TokenStream input){return new TokenStreamFilter(input);}0  0  0  0  0  0  1  0  0  0  0  2  0  0  3
+public override bool Equals(bool value){if (value == null){throw new ArgumentException(" + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " + " +
+
+
+
+
+public virtual DeleteTransitGatewayTransitGatewayTransitGatewayTransitGatewayRequest request){var options = new InvokeOptions();options.RequestMarshaller = DeleteTransitGatewayRequestMarshaller.Instance;options.ResponseUnmarshaller = DeleteTransitGatewayResponseUnmarshaller.Instance;return Invoke<DeleteTransitGatewayResponse>(request, options);}0  0  0  0  0  0  1  0  0  2  3  0  0  0  0  0  4  0  0  5  0  0  0  0  4  6  0  0  7  8  0  0  0  4  9  0  0  10  8  0  0  0  11  0  0  0  3  3  4  4
+
+
+
+public override string ToString(){return this;}0  0  0  0  0  0  0  0  0  1
+
+
+
+
+
+public override bool Equals(){return false;}0  0  0  0  0  0  0  0  0  0  0
+
+
+
+public override void Reset(){return this;}0  0  0  0  0  0  0  0  0  0  0
+public override string ToString(){StringBuilder s = new StringBuilder();}0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0
+
+
+
+
+
+public override string ToString(){return this;}0  0  0  0  0  0  0  0  0  0  0
+
