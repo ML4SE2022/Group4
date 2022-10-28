@@ -1,0 +1,499 @@
+public int getOffset() {return offset;}
+public boolean getValue() {return value;}
+
+
+public boolean contains(Object o) {return false;}
+
+
+
+public void decode() throws IOException {throw new IllegalException();}
+
+
+public boolean contains() {return false;}
+public HSSFacetResult create(String doc) {if (doc) {return " + " + " + " + " + 1;}
+
+
+
+
+
+
+
+
+public int size() {return size;}
+
+
+
+
+
+
+
+
+
+
+public List<String() {return array;}
+
+
+
+
+
+
+public String toString() {return null;}
+
+
+public boolean equals() {return false;}
+
+
+
+
+
+
+
+
+
+
+
+public String toString() throws IOException {throw new IllegalArgumentException {throw new IllegalArgumentException("\n");}
+
+
+
+
+
+
+public int getInt() {return size;}
+
+
+
+
+
+
+
+
+
+
+
+
+public void clear() {return null;}
+
+
+
+
+
+
+
+
+
+
+
+public DescribeDBClusterResult describeCluster(DescribeClusterRequest request) {request = beforeClientExecution(request);return executeDescribeCluster(request);}
+
+
+
+
+public boolean contains(int index) {return index;}
+
+
+
+public String toString() {return null;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public boolean remove() {return false;}
+public UpdateMetadataResult updateMetadata(UpdateMetadataRequest request) {request = beforeClientExecution(request);return executeUpdateMetadata(request);}
+
+
+
+
+
+public String toString() {return null;}
+
+
+
+
+
+public String toString() {return text;}
+
+
+
+
+public String toString() {return "}
+
+
+
+
+
+
+
+
+
+
+public boolean equals() {return false;}
+
+
+
+
+
+
+
+
+public DescribeGroupsResult describeGroups(DescribeGroupsRequest request) {request = beforeClientExecution(request);return executeDescribeGroups(request);}
+
+
+
+
+
+
+
+
+
+
+public CreateDomainResult createDomain(CreateDomainRequest request) {request = beforeClientExecution(request);return executeCreateDomain(request);}
+
+
+public ListEndpointsResult listEndpoints(ListEndpointsRequest request) {request = beforeClientExecution(request);return executeListEndpoints(request);}
+
+
+
+
+
+public Object getKey() {return key;}
+
+
+
+
+
+
+
+
+
+public void clear() {return null;}
+public void clear() {return true;}
+
+
+
+
+
+
+
+
+public boolean equals(Object o) {return false;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public String toString() {return name;}
+
+
+
+
+
+
+
+
+public boolean contains() {return false;}
+
+
+
+public DescribeDBClusterResult describeCluster(DescribeDBClusterRequest request) {request = beforeClientExecution(request);return executeDescribeDBCluster(request);}
+
+
+
+
+
+
+
+
+
+
+
+public String toString() {return buffer;}
+
+
+
+
+
+
+
+
+
+public int size() {return size;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public boolean contains() {return false;}
+
+
+
+
+
+
+
+
+
+public String toString() {return new StringBuilder();}
+public String toString() {return this;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public String getQuery() {return null;}
+
+public DescribeInstanceInstanceResult describeInstance(DescribeInstanceRequest request) {request = beforeClientExecution(request);return executeDescribeInstance(request);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public String toString() {return result;}
+public CreateGroupResult createGroup(CreateGroupRequest request) {request = beforeClientExecution(request);return executeCreateGroup(request);}
+
+
+public DeleteEvaluationResult deleteEvaluation(DeleteEvaluationRequest request) {request = beforeClientExecution(request);return executeDeleteEvaluation(request);}
+
+
+
+
+public String getPath() {return index;}
+
+
+
+
+public DeleteNameRequest(String name) {setName(name);}
+
+
+
+
+
+
+
+
+
+
+public String toString() {return "}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public boolean contains() {return false;}
+
+
+
+
+public DeleteGroupResult deleteGroup(DeleteGroupRequest request) {request = beforeClientExecution(request);return executeDeleteGroup(request);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public UpdateUserResult updateUser(UpdateUserRequest request) {request = beforeClientExecution(request);return executeUpdateUser(request);}
+
+
+
+
+public String toString() {StringBuilder buffer = new StringBuilder();buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");buffer.append("\n");}
+
+
+
+
+
+
+
+public boolean contains() {return copy();}
+
+
+
+public GetApplicationResult getApplication(GetApplicationRequest request) {request = beforeClientExecution(request);return executeGetApplication(request);}
+public String toString() {return new StringBuilder();}
+
+
+
+public String getName() {return name;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public RefResult getRef() {return result;}
+
+
+
+
+public UpdateAccountResult updateAccount(UpdateAccountRequest request) {request = beforeClientExecution(request);return executeUpdateAccount(request);}
+
+
+
+
+
+
+
+
+
+
+public boolean contains() {return false;}
+public ListGroupsResult listGroups(ListGroupsRequest request) {request = beforeClientExecution(request);return executeListGroups(request);}
+
+
+
+
+public DeleteSnapshotResult deleteSnapshot(DeleteSnapshotRequest request) {request = beforeClientExecution(request);return executeDeleteSnapshot(request);}
+public void add(String name) {if (name) {return false;}
+
+public static boolean equals(Object o) throws IOException {try {try {try {try {return new IllegalArgumentException();}
+
+
+
+
+
+
+
+
+
+
+public boolean contains() {return size;}
+
+public String toString() {return null;}
+
+
+
+
+public TokenStream create(TokenStream input) {return new TokenStream(input);}
+
+
+
+
+
+
+
+public String toString() {return null;}
+
+
+
+
+
+public DescribeDBInstancesResult describeInstances(DescribeInstancesRequest request) {request = beforeClientExecution(request);return executeDescribeInstances(request);}
+public File getFile() {return directory;}
+public boolean contains() {return false;}
+
+
+public DescribeInstancesResult describeInstances(DescribeInstancesRequest request) {request = beforeClientExecution(request);return executeDescribeInstances(request);}
+
+public String toString() {return null;}
+public CreateGroupResult createGroup(CreateGroupRequest request) {request = beforeClientExecution(request);return executeCreateGroup(request);}
+
+
+
+
+public String toString() {return result;}
+public boolean contains() {return true;}
