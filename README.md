@@ -29,6 +29,25 @@ provided by CodeT5 with our own data.
 
 Still in progress, to be added later.
 
+
+# Evaluate output
+
+The pre-parsed output of our experiments can be found in `codeXGLUE/data/parsed`. Each separate experiment corresponding to each model and direction of translation can be found in these subdirectories. `cs-java` and `java-cs` contain the baseline results, `t5-cs-java` and `t5-java-cs` the identifier tagging model results, and `t5unique-cs-java` and `t5unique-java-cs` the unique identifier tagging results.
+
+Each of the subdirectories contains a `.src`, `.gold` and `.output` file. These correspond to the source data, the correct translations and our model's output from the experiment respectively.
+
+If you have conducted your own experiment, the output and gold files have to be parsed, for this we have written `result_data_parser.py`, which can also be found in `codeXGLUE`. You can call this on the `.gold` and `.output` files to parse them into a new file as follows:
+
+`python result_data_parser.py [INFILE] > [OUTFILE]`
+
+To evaluate parsed output, simply run `evaluator.py` that can be found in `codeXGLUE/evaluator/` as follows:
+
+`python evaluator.py -ref [PATH-TO-GOLD] -pre [PATH-TO-OUTPUT]`
+
+This should give an output similar to:
+
+`BLEU: 12.14 ; Acc: 4.41`
+
 ## Results
 
 Java to C#:
