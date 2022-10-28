@@ -84,7 +84,7 @@ fi
 
 CUDA_VISIBLE_DEVICES=${GPU} \
   python ${RUN_FN}  ${MULTI_TASK_AUG}   \
-  --do_train --do_eval --do_eval_bleu  \
+  --do_train \
   --task ${TASK} --sub_task ${SUB_TASK} --model_type ${MODEL_TYPE} --data_num ${DATA_NUM}  \
   --num_train_epochs ${EPOCH} --warmup_steps ${WARMUP} --learning_rate ${LR}e-5 --patience ${PATIENCE} \
   --tokenizer_name=${TOKENIZER}  --model_name_or_path=${MODEL_PATH} --data_dir ${WORKDIR}/data  \
