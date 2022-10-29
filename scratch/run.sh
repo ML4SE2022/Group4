@@ -6,7 +6,7 @@ python3 run.py \
 	--config_name roberta-base \
 	--tokenizer_name roberta-base \
 	--train_filename ../data/train.java-cs.txt.java,../data/train.java-cs.txt.cs \
-	--output_dir /output \
+	--output_dir output \
 	--max_source_length 512 \
 	--max_target_length 512 \
 	--beam_size 5 \
