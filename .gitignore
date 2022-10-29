@@ -1,3 +1,5 @@
 tree-sitter-java/
 tree-sitter-c-sharp/
 build/
+scratch/code/output/*
+scratch/code/evaluator/*
