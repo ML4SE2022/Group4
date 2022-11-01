@@ -14,5 +14,19 @@ python3 run.py \
 	--beam_size 5 \
 	--train_batch_size 8 \
 	--learning_rate 5e-5 \
-	--train_steps 50000 \
+	--train_steps 40000 \
 	--eval_steps 5000
+
+# For experiments: 
+
+# train filename [preprocessed train datafile],[normal train datafile]
+# dev filename	 [preprocessed valid datafile],[normal valid datafile]
+
+# change output dir each time to not overwrite
+
+# train steps	40000
+# eval steps	5000
+# batch size	8
+
+# This should take about 8-9 hours
+
