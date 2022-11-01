@@ -31,8 +31,8 @@ def main():
             
         vec_line = " ".join(vec_lines[i][1:-1].split(','))
         code_line = code_lines[i]
-        tokenized_new_line = tokenizer.encode(code_line, vec_line, add_special_tokens=True)
-        new_line = tokenizer.decode(tokenized_new_line)
+        #tokenized_new_line = tokenizer.encode(code_line, vec_line, add_special_tokens=True)
+        new_line = code_line + tokenizer.sep_token + vec_line #tokenizer.decode(tokenized_new_line)
                 
         output += new_line + '\n'
             
