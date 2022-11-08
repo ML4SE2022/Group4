@@ -27,7 +27,7 @@ provided by CodeT5 with our own data.
 
 # Fine Tuned Models
 
-Still in progress, to be added later.
+The fine-tuned models can be downloaded over [here](https://tud365-my.sharepoint.com/:f:/g/personal/davanderende_tudelft_nl/EgxNZeRQeypKl6rPR2FNuYAB0SywCkA8CmngJup8S_k22g?e=Vvb0er) (TU Delft account required).
 
 
 # Evaluate output
