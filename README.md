@@ -22,8 +22,8 @@ With the current parameters, at least a Tesla P100 GPU and 15GB of memory is rec
 `prepare_data.sh`. The input data is found in `data/` (original source: [CodeXGLUE](https://github.com/microsoft/CodeXGLUE)) and its output is saved in `vectors/`.
 2. Concatenate the vectors created in the previous step to the original sequence, resulting in the 
 data that is used for training, by running `preprocess_data.sh`. The output is located at `preprocessed`.
-3. Finally, run `CodeT5/sh/run.sh` to start fine-tuning the model. This step runs the script as 
-provided by CodeT5 with our own data.
+3. Run `code/run.sh` with the correct data files as described in the file to start fine-tuning the model. 
+4. Finally run `code/inference.sh` to perform the inference.
 
 # Fine Tuned Models
 
@@ -46,30 +46,22 @@ To evaluate parsed output, simply run `evaluator.py` that can be found in `codeX
 
 This should give an output similar to:
 
-`BLEU: 12.14 ; Acc: 4.41`
+`BLEU: 78.62 ; Acc: 59.50`
 
 ## Results
 
 Java to C#:
 
-|     Method          |    BLEU    | Acc (100%) |  [CodeBLEU](https://github.com/microsoft/CodeXGLUE/blob/main/Code-Code/code-to-code-trans/CodeBLEU.MD) |  
-|    ----------       | :--------: | :-------:  | :-------: |
-| Naive copy          |   18.54    |    0.0     |      -    |
-| PBSMT      	      |   43.53    |   12.5     |   42.71   |
-| Transformer         |   55.84    |   33.0     |   63.74   |
-| Roborta (code)      |   77.46    |   56.1     |   83.07   |
-| CodeBERT   	      | **79.92**  | **59.0**   | **85.10** |
-| CodeBERT + T5       |     0.0    |     0.0    |     -     |
-| CodeBERT + T5Unique |     0.0    |     0.0    |      -    |
+|     Method          |    BLEU    | Acc (100%) |   
+|    ----------       | :--------: | :-------:  |
+| CodeBERT   	      |   78.62    |   59.50    |
+| CodeBERT + T5       |     78.37  |     57.70  |
+| CodeBERT + T5Unique |     78.97  |     58.20  |
 
 C# to Java:
 
-|     Method          |    BLEU    | Acc (100%) |  [CodeBLEU](https://github.com/microsoft/CodeXGLUE/blob/main/Code-Code/code-to-code-trans/CodeBLEU.MD) | 
-|    ----------       | :--------: | :-------:  | :-------: |
-| Naive copy          |   18.69    |     0.0    |      -    |
-| PBSMT               |   40.06    |    16.1    |   43.48   |
-| Transformer         |   50.47    |    37.9    |   61.59   |
-| Roborta (code)      |   71.99    |    57.9    | **80.18** |
-| CodeBERT            | **72.14**  |  **58.0**  |   79.41   |
-| CodeBERT + T5       |    0.0     |     0.4    |      -    |
-| CodeBERT + T5Unique |    0.0     |     1.4    |      -    |
+|     Method          |    BLEU    | Acc (100%) |
+|    ----------       | :--------: | :-------:  |
+| CodeBERT            |   73.90    |    59.50   |
+| CodeBERT + T5       |    73.57   |     58.00  |
+| CodeBERT + T5Unique |    74.05   |     58.80  |
