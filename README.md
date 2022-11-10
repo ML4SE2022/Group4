@@ -19,7 +19,7 @@ data that is used for training, by running `preprocess_data.sh`. The output is l
 3. Run `code/run.sh` with the correct data files as described in the file to start fine-tuning the model. 
 4. Finally run `code/inference.sh` to perform the inference.
 
-# Fine Tuned Models
+# Fine-tuned models
 
 The fine-tuned models can be downloaded over [here](https://tud365-my.sharepoint.com/:f:/g/personal/davanderende_tudelft_nl/EgxNZeRQeypKl6rPR2FNuYAB0SywCkA8CmngJup8S_k22g?e=Vvb0er) (TU Delft account required).
 
