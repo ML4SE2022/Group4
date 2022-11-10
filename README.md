@@ -1,11 +1,6 @@
-# Group4
-Finetune CodeBERT with AST
+# Fine-tuning CodeBERT with AST-based Vectors for Code Translation
 
-We used two methods to fine tune the codeBERT + decoder model from codeXGLUE.
-The first is the same way as used for codeT5, which adds a binary identifier label
-to the input.
-The second method is our own extend implementation of the above, and gives each identifier
-a unique number instead of a binary label. This method is called T5Unique.
+The ability to translate one programming language (PL) to another programming language (also called transcompiling) provides software engineers with the ability to port code without manually rewriting large amounts of code. In the past transcompiling has been done with rule-based systems but their output is often not easily usable. The rise of Transformers and BERT demonstrated new ways of translating from one language to another. Within this paper we attempt to improve code translation by fine-tuning CodeBERT with meaningful information extracted from Abstract Syntax Trees (ASTs). To that end, we propose two techniques of extracting meaningful information from ASTs for improving code translation. We evaluate these methods against the CodeXGLUE baseline. The results are very similar to the baseline, with a slight improvement of 0.2\% in BLEU score for our newly proposed method, T5Unique.
 
 ## Requirements
 
