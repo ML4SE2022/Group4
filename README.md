@@ -6,8 +6,8 @@ The ability to translate one programming language (PL) to another programming la
 
 With the `requirements.txt` file all python modules that are necessary to run the files
 can be installed.
-However, for tree sitter, two additional modules need to be downloaded for [C#](https://github.com/tree-sitter/tree-sitter-c-sharp)
-and [java](https://github.com/tree-sitter/tree-sitter-java).
+However, for the preprocesisng phase which uses Tree-sitter, two additional modules need to be downloaded for [C#](https://github.com/tree-sitter/tree-sitter-c-sharp)
+and [java](https://github.com/tree-sitter/tree-sitter-java). These modules need to be placed in the directory of the repository.
 
 With the current parameters, at least a Tesla P100 GPU and 15GB of memory is recommended.
 
