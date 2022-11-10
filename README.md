@@ -1,13 +1,12 @@
 # Fine-tuning CodeBERT with AST-based Vectors for Code Translation
 
-The ability to translate one programming language (PL) to another programming language (also called transcompiling) provides software engineers with the ability to port code without manually rewriting large amounts of code. In the past transcompiling has been done with rule-based systems but their output is often not easily usable. The rise of Transformers and BERT demonstrated new ways of translating from one language to another. Within this paper we attempt to improve code translation by fine-tuning CodeBERT with meaningful information extracted from Abstract Syntax Trees (ASTs). To that end, we propose two techniques (T5 and T5Unique) of extracting meaningful information from ASTs for improving code translation. We evaluate these methods against the CodeXGLUE baseline. The results are very similar to the baseline, with a slight improvement of 0.2\% in BLEU score for our newly proposed method, T5Unique.
+The ability to translate one programming language (PL) to another programming language (also called transcompiling) provides software engineers with the ability to port code without manually rewriting large amounts of code. In the past transcompiling has been done with rule-based systems but their output is often not easily usable. The rise of Transformers and BERT demonstrated new ways of translating from one language to another. Within this paper we attempt to improve code translation by fine-tuning CodeBERT with meaningful information extracted from Abstract Syntax Trees (ASTs). To that end, we propose two techniques (T5 and T5Unique) for extracting meaningful information from ASTs for improving code translation. We evaluate these methods against the CodeXGLUE baseline. The results are very similar to the baseline, with a slight improvement of 0.2\% in BLEU score for our newly proposed method, T5Unique.
 
 ## Requirements
 
 With the `requirements.txt` file all python modules that are necessary to run the files
-can be installed.
-However, for the preprocesisng phase which uses Tree-sitter, two additional modules need to be downloaded for [C#](https://github.com/tree-sitter/tree-sitter-c-sharp)
-and [java](https://github.com/tree-sitter/tree-sitter-java). These modules need to be placed in the directory of the repository.
+can be installed. However, for the preprocesisng phase which uses Tree-sitter, two additional modules need to be downloaded for [C#](https://github.com/tree-sitter/tree-sitter-c-sharp)
+and [java](https://github.com/tree-sitter/tree-sitter-java). These modules need to be placed in the directory of the repository. 
 
 With the current parameters, at least a Tesla P100 GPU and 15GB of memory is recommended.
 
